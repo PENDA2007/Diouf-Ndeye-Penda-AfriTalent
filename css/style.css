@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{
+    --primary: #0d6efd;
+    --secondary: #6c757d;
+    --dark: #212529;
+    --light: #f8f9fa;
+    ---white: #ffffff;
+    --black: #000000;
+    --font-title: 'Space Grotesk', sans-serif;
+    --font-text: 'Inter', sans-serif;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 4rem;
+    --shadow:0 2px 4px rgba(0,0,0,.1);
+    
+}
+* {
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-text);
+    color: var(--dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+h1, h2, h3,h4,h5,h6 {
+    font-family: var(--font-text);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+}
+h1{font-family: 3rem;}
+h2{font-size: 2.2rem;}
+h3{font-size: 1.5rem;}
+p{
+    margin-bottom: var(--space-md);
+}
+a{
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+.navbar{
+    box-shadow: var(--shadow);
+}
+.card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+footer{
+    background-color: var(--light);
+    margin-top: var(--space-xl);
+}
+
