@@ -1,4 +1,4 @@
-
+// DARK MODE
 document.addEventListener('DOMContentLoaded', function() {
     const darkToggle = document.getElementById('darkModeToggle');
     
@@ -57,7 +57,7 @@ window.addEventListener('scroll', function() {
 backBtn.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-
+// COMPTEURS ANIMES
 document.addEventListener('DOMContentLoaded', function() {
     const counters = document.querySelectorAll('.counter');
     
@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         counters.forEach(counter => observer.observe(counter));
     }
 });
+// FILTRAGE DES FREELANCES
 document.addEventListener('DOMContentLoaded', function () {
 
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -117,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+// FORNULAIRE DE CONTACT
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contactForm');
   if (!form) return;

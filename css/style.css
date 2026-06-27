@@ -1,3 +1,4 @@
+    /* VARIABLES ET TYPOGRAPRIE */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 :root{
     --primary: #0d6efd;
@@ -59,6 +60,7 @@ footer{
     background-color: var(--light);
     margin-top: var(--space-xl);
 }
+/* BENTO GRID ET EFFETS HOVER */
 .bento-grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -105,7 +107,7 @@ footer{
 }
 
     
-
+/* CATEGORIES DE SERVICES */
 .category-card {
     background: var(---white);
     padding: 1.5rem 1rem;
@@ -146,6 +148,7 @@ footer{
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--primary) ;
+/* RESPONSIVE */
 
 }
 @media(max-width: 992px) {
@@ -228,6 +231,7 @@ footer{
 }
     
 }
+/* IMAGE ACCEUILLE */
 .hero{
     background-image:url(../image/gettyimages-2220587655-2048x2048.jpg) ;
     background-size:cover ;
