@@ -81,7 +81,7 @@ footer{
 }
 .bento-1{ grid-column: span 1; }
 .bento-2{ grid-column: span 1; }
-.bento-3{ grid-column: span 2; }
+.bento-3{ grid-column: span 1; }
 .bento-4{ grid-column: span 1; }
 .step-number{
     font-size: 2.2rem;
@@ -232,7 +232,7 @@ footer{
     background-image:url(../image/gettyimages-2220587655-2048x2048.jpg) ;
     background-size:cover ;
     background-position:center ;
-    min-height: 500px;
+    min-height: 800px;
 }
 .categories-section{
     padding: 60px 0;
@@ -252,6 +252,9 @@ footer{
     color: #0d6efd;
     margin-top: 12px;
     transition: color 0.3s ease;
+}
+.mtHero{
+    padding-top: 7rem;
 }
 .category-card h4 {
     font-size: 0.9rem;
@@ -339,8 +342,44 @@ footer{
 }
 .fade-in.visible{
     opacity: 1;
-    transform: translateY(0);
+}
+@media(max-width:768px) {
+    .how-it-works .row {
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    .how-it-works .col-md-3{
+        width: 100px;
+        max-width: 350px;
+    }
+
+.chifre-cles {
+        padding: 60px 0;
+    }
+}
+.chifre-card {
+    background-color: #0d6efd;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #0d6efd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.chifre-card :hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.chifre-card .counter {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #16213e;
+    display: block;
+
+}
+.chifre-card p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #333;
 }
 
     
-

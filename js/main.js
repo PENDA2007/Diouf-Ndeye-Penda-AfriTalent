@@ -88,6 +88,95 @@ document.addEventListener('DOMContentLoaded', function() {
         counters.forEach(counter => observer.observe(counter));
     }
 });
+document.addEventListener('DOMContentLoaded', function () {
 
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const freelanceCards = document.querySelectorAll('.freelance-card');
 
-   
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+
+            const category = this.dataset.category;
+
+            freelanceCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            filterButtons.forEach(btn => {
+                btn.classList.remove('btn-primary', 'active');
+                btn.classList.add('btn-outline-primary');
+            });
+
+            this.classList.remove('btn-outline-primary');
+            this.classList.add('btn-primary', 'active');
+        });
+    });
+
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nom = document.getElementById('nom');
+    const prenom = document.getElementById('prenom');
+    const email = document.getElementById('email');
+    const sujet = document.getElementById('sujet');
+    const message = document.getElementById('message');
+    let isValid = true;
+
+    
+    document.querySelectorAll('.error-message').forEach(el => el.remove());
+    document.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+
+    if (!nom.value.trim()) {
+      shadowError(nom, 'le nom est requis');
+      isValid = false;
+    }
+
+    if (!prenom.value.trim()) {
+      shadowError(prenom, 'le prenom est requis');
+      isValid = false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.value.trim()) {
+      shadowError(email, "l'email est requis");
+      isValid = false;
+    } else if (!emailRegex.test(email.value.trim())) {
+      shadowError(email, 'Email invalide');
+      isValid = false;
+    }
+
+    if (!message.value.trim()) {
+      shadowError(message, 'le message est requis');
+      isValid = false;
+    } else if (message.value.trim().length < 20) {
+      shadowError(message, 'le message doit contenir au moins 20 caractères');
+      isValid = false;
+    }
+
+    if (isValid) {
+      document.getElementById('formSuccess').style.display = 'block';
+      form.reset();
+      setTimeout(() => {
+        document.getElementById('formSuccess').style.display = 'none';
+      }, 5000);
+    }
+
+    function shadowError(input, message) {
+      input.classList.add('is-invalid');
+      const div = document.createElement('div');
+      div.className = 'error-message text-danger small mt-1';
+      div.textContent = message;
+      input.parentNode.insertBefore(div, input.nextSibling);
+    }
+  });
+});
+

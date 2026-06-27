@@ -15,8 +15,7 @@ rel="stylesheet">
 <script 
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 ></script> 
-<!-- Votre script JavaScript --> 
-<script src="js/main.js"></script>
+
 
 <!-- NAVBAR -->
 
@@ -50,20 +49,20 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
     <div class="text-center">
         <h5>flitre par categorie:</h5>
         <div class="d-flex flex-warp justify-content-center gap-2">
-            <button class="btn btn-outline-primary">Tous</button>
-            <button class="bnt bnt-outline-primary">Developpement Web</button>
-            <button class="bnt bnt-outline-primary">Design UI/UX</button>
-            <button class="bnt bnt-outline-primary">Marketing Digital</button>
-            <button class="bnt bnt-outline-primary">Redaction Tech</button>
-            <button class="bnt bnt-outline-primary">Dev0sp & Cloud</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="all">Tous</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="web">Développement Web</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="design">Design UI/UX</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="marketing">Marketing Digital</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="data">Rédaction Tech</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="devops">DevOps & Cloud</button>
         </div>
     </div>
  </div>
  <!--  FREELANCES  -->
   <div class="container my-5">
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card h-100 texte-center">
+        <div class="col-12 col-md-6 col-lg-4 mb-4  freelance-card" data-category="web">
+            <div class="card h-100 texte-center" >
                 <img src="image/pexels-thirdman-5060980.jpg" alt="">
                 <h5 class="card-text small">Amadou Diallo</h5>
                 <p class="text-primary fw-bold">Developpeur Full-Stack</p>
@@ -74,8 +73,8 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
             </div> 
         </div>
     
-    <div class="col-12 c0l-md-6 col-lg-4 mb-4">
-        <div class="card ">
+    <div class="col-12 c0l-md-6 col-lg-4 mb-4 freelance-card" data-category="design">
+        <div class="card designux">
             <img src="image/pexels-mizunokozuki-12903256.jpg"  class=" card-img-top" alt="">
             <div class="card-body">
                 <h5 class="card-title">Fatima konate</h5>
@@ -87,7 +86,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
             </div>
         </div>
     </div>
-    <div class="col-12 c0l-md-6 col-lg-4 mb-4 ">
+    <div class="col-12 c0l-md-6 col-lg-4 mb-4  freelance-card " data-category="marketing">
         <div class="card ">
             <img src="image/image.jpeg" alt="">
             <div class="card-body">
@@ -100,7 +99,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="col-12 col-md-6 col-lg-4 mb-4 freelance-card" data-category="data">
         <div class="card">
             <img src="image/pexels-mikhail-nilov-9301868.jpg" alt="">
             <div class="card-body">
@@ -113,7 +112,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="col-12 col-md-6 col-lg-4 mb-4 freelance-card">
         <div class="card">
             <img src="image/pexels-shkrabaanthony-5466267.jpg" alt="">
             <div class="card-body">
@@ -126,7 +125,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="col-12 col-md-6 col-lg-4 mb-4 freelance-card" data-category="devops">
         <div class="card">
             <img src="image/pexels-diva-plavalaguna-6149788.jpg" alt="">
             <div class="card-body">
@@ -139,7 +138,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
             </div>
         </div>
     </div>
-     <div class="col-12 col-md-6 col-lg-4 mb-4">
+     <div class="col-12 col-md-6 col-lg-4 mb-4 freelance-card" data-category="web">
         <div class="card">
             <img src="image/pexels-mikhail-nilov-9304676.jpg" alt="">
             <div class="card-body">
@@ -152,7 +151,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
             </div>
         </div>
     </div>
-     <div class="col-12 col-md-6 col-lg-4 mb-4">
+     <div class="col-12 col-md-6 col-lg-4 mb-4 freelance-card">
         <div class="card">
             <img src="image/pexels-shkrabaanthony-6609467.jpg" alt="">
             <div class="card-body">
@@ -165,7 +164,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="col-12 col-md-6 col-lg-4 mb-4 freelance-card">
         <div class="card">
             <img src="image/pexels-mizunokozuki-12911770.jpg" alt="">
             <div class="card-body">
@@ -224,6 +223,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 ></script>
 <script src="js/main.js"></script>
+
 
 
 
